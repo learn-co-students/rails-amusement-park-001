@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h3>Name:</h3>
+<%= @user.name %>
+<h3>Height:</h3>
+<%= @user.height %>
+<h3>Mood:</h3>
+<%= @user.mood %>
+<h3>Nausea:</h3>
+<%= @user.nausea %>
+<h3>Tickets:</h3>
+<%= @user.tickets %>
+<h3><% if @user.admin %>
+      <%= "ADMIN" %>
+    <% end %></h3>
+
+<%= link_to("See attractions", '/attractions') %> |
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

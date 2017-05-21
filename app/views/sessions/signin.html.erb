@@ -1,0 +1,11 @@
+<%= form_tag("/signin", method: "post") do %>
+
+  <%= label_tag(:name, "Name") %>
+  <%= text_field_tag(:name, "", options = { name: "session[name]", id: "user[name]"}) %><br>
+
+  <%= label_tag(:password, "Password") %>
+  <%= text_field_tag(:password, "", options = { name: "session[password]", id: "user[password]"}) %><br>
+
+
+  <%= submit_tag("Sign In") %>
+<% end %>

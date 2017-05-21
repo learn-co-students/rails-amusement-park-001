@@ -20,6 +20,14 @@
             <span class="icon-bar"></span>
           </button>
         <a class="navbar-brand" href="<%= root_url %>"/>Home</a>
+        <% if @user == nil %>
+          <%= link_to("Sign Up", '/users/new') %>
+          <%= link_to("Sign In", '/signin') %>
+        <% else %>
+          <%= "Hello, #{@user.name}!" %>
+          <%= link_to("Attractions", '/attractions') %>
+          <%= link_to("Log Out", '/logout') %>
+        <% end %>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
